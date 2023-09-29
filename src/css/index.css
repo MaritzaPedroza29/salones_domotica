@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.mio-signup{
+  background: linear-gradient(rgba(5,7,12, 0.2),rgba(5,7,12,0.2)),
+  url('../img/domotica2.jpg') no-repeat center center fixed;
+}
+.mio-signin{
+  background: linear-gradient(rgba(5,7,12, 0.2),rgba(5,7,12,0.2)),
+  url('../img/domotica2.jpg') no-repeat center center fixed;
+}
+.background{
+  background-color: #ffffff;
+}
+.mio-botones .btn{
+  background-color: #049cab;
+  border-color: #ffffff;
+}
+.mio-link{
+  color: white !important;
+}
+.mio-logo{
+  width: 100px;
+}
+.mio-navbar{
+  background-color: #049cab;
+}
+.mio-splash-screen {
+  display: flex; /* Utiliza el modelo de caja flexible */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Establece una altura deseada para el contenedor */
+}
+.mio-.imagen-centrada {
+  max-width: 100%; /* Evita que la imagen se desborde del contenedor */
+  max-height: 100%; /* Evita que la imagen se desborde del contenedor */
+}
+.mio-rectangle {
+  width: 300px;
+  height: 450px;
+  background-color:#ffffff;
+  border: 1px solid black;
+}
+.mio-cuadrado {
+  width: 20px;
+  height: 20px;
+  background-color:#ffffff;
+  border: 1px solid black;
+}
+.mio-columnas{
+  display: flex;
+  justify-content: space-between;
+}
+.mio-rectangle-piso{
+  width: 260px;
+  height: 100px;
+  background-color:#ffffff;
+  border: 1px solid black;
+  margin: 10px 20px 30px 20px;
+}
