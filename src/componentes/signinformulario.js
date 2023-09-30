@@ -47,7 +47,7 @@ import "../css/index.css"
                         </Form.Control.Feedback>
                     </div>
                     <div className="mio-botones d-grid">
-                        <Button className="">Iniciar sesión</Button>
+                        <Button type="submit" className="">Iniciar sesión</Button>
                     </div>
                     <p className="text-end mt-2">
                         Olvido <a href="">su Contraseña?</a><Link to="/signup" className="ms-2 link">Registrarse</Link>

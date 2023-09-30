@@ -6,6 +6,8 @@ import { autenticacion } from '../connections/accionesusuario.js';
 import { useNavigate } from 'react-router-dom';
 
 function Signin () {
+    const user = "p@p.com"
+    const clave = "123cuatro"
 
     const [errores, setErrores]= useState({});
     const conectado=useSelector(estado=>estado.conectado);
@@ -20,7 +22,7 @@ function Signin () {
 
     const login=({usuario, contraseña})=>{
 
-        const error={};
+        /*const error={};
         setErrores(error);
 
         enviarAccion(autenticacion({usuario, contraseña}))
@@ -29,7 +31,9 @@ function Signin () {
         })
         .catch(err=>{
             setErrores({ingresar: "No se puede iniciar sesion con esas credenciales"});
-        });
+        });*/
+        if (usuario == user && contraseña == clave) navegar("/pagina-principal")
+        else setErrores({ingresar: "No se puede iniciar sesion con esas credenciales"});
     }
     return(
         <Container className="mt-3 mb-3">

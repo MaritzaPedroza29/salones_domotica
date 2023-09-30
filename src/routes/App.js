@@ -14,8 +14,8 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Inicio/>}></Route>
-          <Route path='/signin' element={<Signin/>}></Route>
+          <Route path='/inicio' element={<Inicio/>}></Route>
+          <Route path='/' element={<Signin/>}></Route>
           <Route path='/signup' element={<Signup/>}></Route>
           <Route path='/pagina-principal' element={<SplashScreen/>}></Route>
         </Routes>

@@ -1,0 +1,8 @@
+{
+    "message": "Usuario encontrado",
+    "data": {
+        "id": 2,
+        "nom": "toño"
+    },
+    "statusCode": 200
+}

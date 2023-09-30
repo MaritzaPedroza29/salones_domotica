@@ -2,8 +2,10 @@ import { Alert, Card, Col, Container, Row } from "react-bootstrap";
 import { Rectangulo } from "../componentes/rectaguloinicio";
 import { Cuadrado } from "../componentes/cuadradoinicio";
 import { Navegacion } from "../layouts/navegacion";
+import { getUser } from "../services/api";
 
 function Inicio (){
+    getUser()
     return(
         <>
             <Navegacion></Navegacion>
