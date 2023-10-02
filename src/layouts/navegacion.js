@@ -1,10 +1,10 @@
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
-import NavLink from 'react-bootstrap/NavLink';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import miImagen from '../img/Smartroom.png';
+import { NavLink } from 'react-router-dom';
 
 function Navegacion(){
 return (

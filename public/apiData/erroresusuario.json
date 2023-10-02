@@ -1,0 +1,7 @@
+{
+    "data": {
+      "code": "401",
+      "message": "Inicio de sesión fallido",
+      "description": "El nombre de usuario o la contraseña proporcionados son incorrectos. Por favor, verifica tus credenciales e inténtalo nuevamente."
+    }
+  }

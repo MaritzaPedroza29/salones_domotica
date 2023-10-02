@@ -1,8 +1,9 @@
 {
     "message": "Usuario encontrado",
     "data": {
-        "id": 2,
-        "nom": "toño"
+        "id": 1,
+        "nombre": "Maritza",
+        "correo" : "maritzapedrozacharri@gmail.com"
     },
     "statusCode": 200
 }

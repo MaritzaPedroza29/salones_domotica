@@ -68,3 +68,10 @@ code {
   border: 1px solid black;
   margin: 10px 20px 30px 20px;
 }
+.mio-bloqueA{
+  border: 1px solid black;
+}
+.mio-cardimagen{
+  width: 100px;
+  height: 100px;
+}

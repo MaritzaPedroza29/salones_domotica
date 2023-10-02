@@ -2,5 +2,7 @@
 const API_URL = "http://localhost:3000/"
 
 export const SIGNUP_POST_ENDPOINT= API_URL+"/usuario";
-export const SIGNIN_POST_ENDPOINT= API_URL+"/usuario/login"
-export const GETUSER_GET_ENDPOINT = API_URL+"apiData/user.json"
+export const SIGNIN_POST_ENDPOINT= API_URL+"/usuario/login";
+export const GETUSER_GET_ENDPOINT = API_URL+"apiData/user.json";
+export const LOGIN_POST_ENDPOINT = API_URL+"apiData/erroresusuario.json";
+export const USUARIOS_GET_ENDPOINT = API_URL+"apiData/cardusuarios.json";

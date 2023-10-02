@@ -2,13 +2,22 @@ import { Alert, Card, Col, Container, Row } from "react-bootstrap";
 import { Rectangulo } from "../componentes/rectaguloinicio";
 import { Cuadrado } from "../componentes/cuadradoinicio";
 import { Navegacion } from "../layouts/navegacion";
-import { getUser } from "../services/api";
+import { Getuser } from "../services/api";
 
 function Inicio (){
-    getUser()
+    Getuser()
     return(
         <>
             <Navegacion></Navegacion>
+            <div className="container_bloques row">
+                <div className="mio-bloqueA col-4">
+                    <div className="piso1">
+                        <div className="card">
+                    
+                        </div>
+                    </div>
+                </div>
+            </div>
             <Container className="mt-4">
                 <h3 className="text-center">Inicio</h3>
                 <Card.Body>
