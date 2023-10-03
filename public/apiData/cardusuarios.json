@@ -3,7 +3,7 @@
       "usuario": "Usuario1",
       "data": {
         "id": 1,
-        "imagen": "./../../src/img/profesora1.png",
+        "imagen": "./img/profesora1.png",
         "nombre": "Jessica Rodriguez",
         "correo": "doc_js_rodriguez@fesc.edu.co",
         "estado": "1"
@@ -13,8 +13,8 @@
       "usuario": "Usuario2",
       "data": {
         "id": 2,
-        "imagen": "../../img/profesor2.png",
-        "nombre": "Sebastián Galinda",
+        "imagen": "./img/profesor2.png",
+        "nombre": "Sebastián Galindo",
         "correo": "doc_js_galindo@fesc.edu.co"
       }
     },
@@ -22,7 +22,7 @@
       "usuario": "Usuario3",
       "data": {
         "id": 3,
-        "imagen": "../../img/profesora3.png",
+        "imagen": "./img/profesora3.png",
         "nombre": "Magda Martinez",
         "correo": "doc_mf_martinez@fesc.edu.co"
       }
@@ -31,7 +31,7 @@
         "usuario": "Usuario4",
         "data": {
             "id": 4,
-          "imagen":  "../../img/profesor4.png",
+          "imagen":  "./img/profesor4.png",
           "nombre": "Rodolfo Ortega",
           "correo": "doc_jr_ortega@fesc.edu.co"
         }
@@ -40,7 +40,7 @@
         "usuario": "Usuario5",
         "data": {
             "id": 5,
-          "imagen": "../../img/profesora6.png",
+          "imagen": "./img/profesora6.png",
           "nombre": "Maria Fernandez",
           "correo": "est_mf_fernandez@fesc.edu.co"
         }
@@ -49,7 +49,7 @@
         "usuario": "Usuario6",
         "data": {
             "id": 6,
-          "imagen": "../../img/profesor5.png",
+          "imagen": "./img/profesor5.png",
           "nombre": "Darwin Cardozo",
           "correo": "doc_da_cardozo@fesc.edu.co"
         }

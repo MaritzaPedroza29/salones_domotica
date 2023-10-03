@@ -72,6 +72,29 @@ code {
   border: 1px solid black;
 }
 .mio-cardimagen{
-  width: 100px;
-  height: 100px;
+  width: 100px; 
+  float: left;
+  margin-right: 10px;
+}
+.mio-botoncrear .btn{
+  background-color: #049cab;
+  border-color: #ffffff;
+  float: right;
+}
+.mio-cardtitle{
+  float: left;
+}
+.mio-contenedor{
+  display: flex;
+  width: 400px;
+}
+.mio-botoneliminar .btn{
+  color: #ffffff;
+  width: 30px;
+  height: 30px;
+  float: right;
+  margin-top: -70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
