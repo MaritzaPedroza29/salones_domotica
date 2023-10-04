@@ -1,7 +1,7 @@
 import { Alert, Card, Col, Container, Row } from "react-bootstrap";
 import { Navegacion } from "../layouts/navegacion";
 import { Cardusuario } from "../componentes/cardusuarios";
-import {USUARIOS_GET_ENDPOINT} from "../connections/helpers/endpoints";
+//import {USUARIOS_GET_ENDPOINT} from "../connections/helpers/endpoints";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Botoncrear } from "../componentes/Botoncrear";
@@ -13,14 +13,14 @@ const Usuarios= ()=>{
     const [mostrarModal, setMostrarModal] = useState(false);
 
     useEffect(()=>{
-        axios.get(USUARIOS_GET_ENDPOINT)
+        /*axios.get(USUARIOS_GET_ENDPOINT)
         .then(respuesta=>{
             setUsuarios(respuesta.data);
             setBuscando(false);
         }).catch(e=>{
             console.error(e);
             setBuscando(false);
-        })
+        })*/
     }, []);
 
     const abrirModal = () => {

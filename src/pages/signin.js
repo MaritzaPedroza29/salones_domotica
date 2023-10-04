@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import {SigninFormulario} from '../componentes/signinformulario.js';
 import { Alert, Card, Col, Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from 'react-redux';
-import { Getuser} from '../services/api.js';
 import { useNavigate } from 'react-router-dom';
+import {autenticacion} from '../connections/accionesusuario.js'
 
 function Signin () {
     const [errores, setErrores]= useState({});
@@ -13,26 +13,23 @@ function Signin () {
 
     useEffect(()=>{
         if(conectado){
-            navegar("/pagina-principal")
+            navegar("/");
         }
     });
 
-    const login =({ usuario, contraseña })=>{
+    const login=({usuario, contraseña}) =>{
         const error={};
         setErrores(error);
+        console.log(usuario, contraseña);
 
-        Getuser(usuario, contraseña)
+        enviarAccion(autenticacion({usuario, contraseña}))
         .then(respuesta=>{
-            if(respuesta.data.code == 401){
-                setErrores({ingresar: respuesta.data.description});
-            }else{
-                navegar("/pagina-principal")
-            }
-            
-        }).catch(err=>{
+            console.log(respuesta);
+            navegar("/");
+        })
+        .catch(err=>{
             setErrores({ingresar: "No se puede iniciar sesion con esas credenciales"});
-        });
-        
+        })
     }
     return(
         <Container className="mt-3 mb-3">

@@ -10,7 +10,9 @@ export const autenticacion = (datos)=>dispatch=>{
         axios.get(SIGNIN_POST_ENDPOINT, datos,
             {headers:{'Accept':'application/json','Content-Type':'application/json'}
         }).then(respuesta=>{
+            console.log(respuesta.headers);
             const {authorization} = respuesta.headers;
+            console.log(authorization);
 
             localStorage.setItem('token', authorization);
 

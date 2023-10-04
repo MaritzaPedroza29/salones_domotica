@@ -9,7 +9,9 @@ import { Provider } from 'react-redux';
 import { store } from '../states/store';
 import { Inicio } from '../pages/inicio';
 import { Usuarios } from '../pages/usuarios';
+import { getAutenticacionToken } from '../connections/helpers/token';
 
+getAutenticacionToken()
 function App() {
   return (
     <Provider store={store}>
