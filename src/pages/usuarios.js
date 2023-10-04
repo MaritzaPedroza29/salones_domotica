@@ -25,7 +25,7 @@ return(
     <>
         <Navegacion></Navegacion>
         <Container className="mt-3 mb-3">
-            <Row className="justify-content-md-center">
+            <Row className="mio-container">
                 <Col sm="12" md="8" lg="6">
                     {buscando ? "Cargando...":(usuarios.length ===0 && "No hay partidos disponibles")}
                     {usuarios.map(usuario =><Cardusuario key={usuario.id} usuarios={usuario}/>)}

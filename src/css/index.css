@@ -75,3 +75,13 @@ code {
   width: 100px;
   height: 100px;
 }
+.mio-card {
+  width: 600px;
+  margin-bottom: 20px;
+}
+.mio-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}

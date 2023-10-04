@@ -6,7 +6,7 @@ const Cardusuario= ({usuarios})=>{
     console.log(usuarios);
     return(
         <Card className="mt-3 mb-3">
-            <Card.Body>
+            <Card.Body className="mio-card">
                 <img
                     src={usuarios.data.imagen}
                     alt=""
