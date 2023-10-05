@@ -12,18 +12,16 @@ code {
     monospace;
 }
 .mio-signup{
-  background: linear-gradient(rgba(5,7,12, 0.2),rgba(5,7,12,0.2)),
-  url('../img/domotica2.jpg') no-repeat center center fixed;
+  background: linear-gradient(to right, #a4130e, rgba(164,19,14,255));
 }
 .mio-signin{
-  background: linear-gradient(rgba(5,7,12, 0.2),rgba(5,7,12,0.2)),
-  url('../img/domotica2.jpg') no-repeat center center fixed;
+  background: linear-gradient(to right,#a4130e,rgba(164,19,14,225));
 }
 .background{
   background-color: #ffffff;
 }
 .mio-botones .btn{
-  background-color: #049cab;
+  background-color: #a4130e;
   border-color: #ffffff;
 }
 .mio-link{
@@ -31,9 +29,10 @@ code {
 }
 .mio-logo{
   width: 100px;
+  height: 70px;
 }
 .mio-navbar{
-  background-color: #049cab;
+  background-color: #a4130e;
 }
 .mio-splash-screen {
   display: flex; /* Utiliza el modelo de caja flexible */
@@ -77,7 +76,7 @@ code {
   margin-right: 10px;
 }
 .mio-botoncrear .btn{
-  background-color: #049cab;
+  background-color: #a4130e;
   border-color: #ffffff;
   float: right;
 }
@@ -117,4 +116,20 @@ code {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+}
+.mio-containerimagen{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mio-center{
+  margin-top: -400px;
+}
+.mio-imagen{
+  width: 100px;
+}
+.mio-switch .form-switch .form-check-input{
+ float: right;
+ height: 20px;
+ border: solid 1px #000000;
 }

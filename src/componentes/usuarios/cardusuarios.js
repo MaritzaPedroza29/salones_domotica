@@ -1,6 +1,7 @@
-import { Badge, Button, Card } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import Form from 'react-bootstrap/Form';
 
 
 const Cardusuario= ({usuarios})=>{
@@ -20,8 +21,12 @@ const Cardusuario= ({usuarios})=>{
                         <FontAwesomeIcon icon={faTimes} /> 
                     </Button>
                 </div>
-                <Button variant="success" style={{ marginRight: '10px' }}>Activo</Button>
-                <Button variant="warning" style={{ marginLeft: '10px' }}>Inactivo</Button>
+                <div className="mio-switch">
+                <Form.Switch // prettier-ignore
+                    type="switch"
+                   className=""
+                />
+                </div>
             </Card.Body>
         </Card>
     )

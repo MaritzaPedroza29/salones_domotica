@@ -1,5 +1,4 @@
-/*import {LOGIN_POST_ENDPOINT} from "../connections/helpers/endpoints"
-import { GETUSER_GET_ENDPOINT } from "../connections/helpers/endpoints";*/
+import GETUSER_GET_ENDPOINT from "../apiData/cardusuarios.json";
 import axios from "axios"
 
 
@@ -13,10 +12,9 @@ export const Getuser = async (usuario, clave) => {
       
       if (usuario === correo && clave === password) {
         console.log("entra en el if del si");
-        //response = await axios.get(GETUSER_GET_ENDPOINT);
+        response = await axios.get(GETUSER_GET_ENDPOINT);
       } else {
         console.log("entra en el if del else");
-        //response = await axios.get(LOGIN_POST_ENDPOINT);
       }
   
       console.log(response.data);

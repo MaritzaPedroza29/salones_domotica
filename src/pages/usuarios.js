@@ -1,27 +1,82 @@
-import { Alert, Card, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { Navegacion } from "../layouts/navegacion";
-import { Cardusuario } from "../componentes/cardusuarios";
-//import {USUARIOS_GET_ENDPOINT} from "../connections/helpers/endpoints";
-import axios from "axios";
+import { Cardusuario } from "../componentes/usuarios/cardusuarios";
 import { useEffect, useState } from "react";
-import { Botoncrear } from "../componentes/Botoncrear";
-import { ModalCrearUsuario } from "../componentes/modalcrearusuario";
+import { Botoncrear } from "../componentes/usuarios/Botoncrear";
+import { ModalCrearUsuario } from "../componentes/usuarios/modalcrearusuario";
+import { usuario } from "../states/sliceReducers";
+
 
 const Usuarios= ()=>{
-    const [usuarios, setUsuarios] = useState([]);
-    const [buscando, setBuscando] = useState(true);
     const [mostrarModal, setMostrarModal] = useState(false);
-
-    useEffect(()=>{
-        /*axios.get(USUARIOS_GET_ENDPOINT)
-        .then(respuesta=>{
-            setUsuarios(respuesta.data);
-            setBuscando(false);
-        }).catch(e=>{
-            console.error(e);
-            setBuscando(false);
-        })*/
-    }, []);
+    const [usuarios, setUsuarios] = useState([
+         usuarios = [
+            {
+              "usuario": "Usuario1",
+              "data": {
+                "id": 1,
+                "imagen": "./img/profesora1.png",
+                "nombre": "Jessica Rodriguez",
+                "correo": "doc_js_rodriguez@fesc.edu.co",
+                "estado": "1"
+              }
+            },
+            {
+              "usuario": "Usuario2",
+              "data": {
+                "id": 2,
+                "imagen": "./img/profesor2.png",
+                "nombre": "Sebastián Galindo",
+                "correo": "doc_js_galindo@fesc.edu.co",
+                "estado": "2"
+              }
+            },
+            {
+              "usuario": "Usuario3",
+              "data": {
+                "id": 3,
+                "imagen": "./img/profesora3.png",
+                "nombre": "Magda Martinez",
+                "correo": "doc_mf_martinez@fesc.edu.co",
+                "estado": "1"
+              }
+            },
+            {
+                "usuario": "Usuario4",
+                "data": {
+                    "id": 4,
+                  "imagen":  "./img/profesor4.png",
+                  "nombre": "Rodolfo Ortega",
+                  "correo": "doc_jr_ortega@fesc.edu.co",
+                  "estado":"1"
+                }
+            },
+            {
+                "usuario": "Usuario5",
+                "data": {
+                    "id": 5,
+                  "imagen": "./img/profesora6.png",
+                  "nombre": "Maria Fernandez",
+                  "correo": "est_mf_fernandez@fesc.edu.co"
+                }
+              },
+              {
+                "usuario": "Usuario6",
+                "data": {
+                    "id": 6,
+                  "imagen": "./img/profesor5.png",
+                  "nombre": "Darwin Cardozo",
+                  "correo": "doc_da_cardozo@fesc.edu.co",
+                  "estado":"2"
+                }
+              }
+          ]
+    ]);
+  
+    const agregarUsuario = (nuevoUsuario) => {
+        setUsuarios([...usuarios, nuevoUsuario]);
+      };
+    
 
     const abrirModal = () => {
         setMostrarModal(true);
@@ -30,18 +85,14 @@ const Usuarios= ()=>{
       const cerrarModal = () => {
         setMostrarModal(false);
       };    
-
-
-
 return(
     <>
         <Navegacion></Navegacion>
         <Container className="mt-3 mb-3">
         <h3 className="text-center">Usuarios</h3>
             <Botoncrear abrirModal={abrirModal} ></Botoncrear>
-            <ModalCrearUsuario mostrarModal={mostrarModal} cerrarModal={cerrarModal}/>
+            <ModalCrearUsuario mostrarModal={mostrarModal} cerrarModal={cerrarModal} agregarUsuario={agregarUsuario} usuarios={usuario}/>
             <Row className="justify-content-md-center">
-                    {buscando ? "Cargando...":(usuarios.length ===0 && "No hay partidos disponibles")}
                     {usuarios.map(usuario => <Col sm="12" md="8" lg="6"><Cardusuario key={usuario.id} usuarios={usuario}/></Col>)}
             </Row>
         </Container>
