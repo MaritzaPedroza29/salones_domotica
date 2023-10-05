@@ -7,10 +7,10 @@ import { usuario } from "../states/sliceReducers";
 export const autenticacion = (datos)=>dispatch=>{
     return new Promise((resolver, rechazar)=>{
 
-        axios.get(SIGNIN_POST_ENDPOINT, datos,
+        axios.post(SIGNIN_POST_ENDPOINT, datos,
             {headers:{'Accept':'application/json','Content-Type':'application/json'}
         }).then(respuesta=>{
-            console.log(respuesta.headers);
+            console.log(respuesta);
             const {authorization} = respuesta.headers;
             console.log(authorization);
 
