@@ -3,37 +3,39 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import React, { useState, useEffect } from 'react';
 
-function ModalCrearUsuario({ mostrarModal, cerrarModal, agregarUsuario={agregarUsuario}, Usuarios={Usuarios}}) {
-      const [usuarios, setUsuarios] = useState([]);
-      const [nuevoUsuario, setNuevoUsuario] = useState({
-        nombre: "",
-        correo: "",
-      });
+function ModalCrearUsuario({ mostrarModal, cerrarModal, agregarUsuario, usuarios }) {
+  const [nuevoUsuario, setNuevoUsuario] = useState({
+    nombre: "",
+    correo: "",
+  });
+  const agregarusuario = () => {
+    if (!nuevoUsuario.nombre.trim() || !nuevoUsuario.correo.trim()) {
+      return;
+    }
 
-
-      const agregarusuario = () => {
-        if (!nuevoUsuario.nombre.trim() || !nuevoUsuario.correo.trim()) {
-          return;
-        }
-
-      // Genera un nuevo usuario con los datos proporcionados
-      const nuevoUsuarioData = {
-        usuario: "Usuario" + (usuarios.length + 1),
-        data: {
-          id: usuarios.length + 1,
-          imagen: "./img/user.png",
-          nombre: nuevoUsuario.nombre,
-          correo: nuevoUsuario.correo,
-          },
-      };
-      console.log(nuevoUsuarioData);
-      agregarUsuario(nuevoUsuarioData);
-      // Actualiza el estado para agregar el nuevo usuario
+    // Genera un nuevo usuario con los datos proporcionados
+    const nuevoUsuarioData = {
+      usuario: "Usuario" + (usuarios.length + 1),
+      data: {
+        id: usuarios.length + 1,
+        imagen: "./img/user.png",
+        nombre: nuevoUsuario.nombre,
+        correo: nuevoUsuario.correo,
+      },
     };
-      const handleSubmit = (e) => {
-        e.preventDefault();
-        agregarusuario();
-      };
+
+    agregarUsuario(nuevoUsuarioData);
+    // Actualiza el estado para agregar el nuevo usuario
+    setNuevoUsuario({
+      nombre: "",
+      correo: "",
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    agregarusuario();
+  };
     return (
       <Modal show={mostrarModal} onHide={cerrarModal}>
         <Form onSubmit={handleSubmit}>
