@@ -5,7 +5,7 @@ import Modal from 'react-bootstrap/Modal';
 import { usuario } from '../../states/sliceReducers';
 
 function Modaldetalleusuario(props){
-    const { show, handleClose, userData,actualizarUsuarios} = props;
+    const { show, handleClose, userData} = props;
     const [disabled, setDisabled] = useState(true);
     const [nuevoNombre, setNuevoNombre] = useState("");
     const [nuevoCorreo, setNuevoCorreo] = useState("");
@@ -24,7 +24,7 @@ function Modaldetalleusuario(props){
         usuario = userData.usuario;
         idusuario = userData.data.id;
         imagen = userData.data.imagen;
-        
+        console.log(imagen);
         // ...
       } else {
         // Maneja el caso en que userData o userData.data sea nulo
@@ -48,7 +48,7 @@ function Modaldetalleusuario(props){
           },
         };
         console.log(nuevoUsuarioData);
-        actualizarUsuarios(nuevoUsuarioData);
+        //actualizarUsuarios(nuevoUsuarioData);
         // Actualiza el estado para agregar el nuevo usuario
         setNuevoNombre({
           nombre: "",
