@@ -1,12 +1,12 @@
-import { Alert, Card, Col, Container, Row } from "react-bootstrap";
-import { Rectangulo } from "../componentes/rectaguloinicio";
-import { Cuadrado } from "../componentes/cuadradoinicio";
+import {  Card, Col, Container, Row } from "react-bootstrap";
+import { Rectangulo } from "../componentes/inicio/rectaguloinicio";
 import { Navegacion } from "../layouts/navegacion";
 import { useState } from "react";
 import { Cardbloques } from "../componentes/inicio/cardbloques";
 
+
 function Inicio (){
-    const [mostrarbloque, setMostrarbloque] = useState(false);
+    const [selectedCard, setSelectedCard] = useState(null);
     const [salones, setSalones] = useState([
         {
           "bloque": "bloqueA",
@@ -15,31 +15,31 @@ function Inicio (){
             "pisos": [
                 {
                   "id": 1,
-                  "piso": "primer piso",
+                  "piso": "Primer piso",
                   "salones": [
                     {
                         "id":1,
-                        "Salon":"A101",
+                        "salon":"A101",
                         "profesor":"Juan Sebastián Galindo",
                         "estado": "0"
                     },{
                         "id":2,
-                        "Salon":"A102",
+                        "salon":"A102",
                         "profesor":"Magda Martinez",
                         "estado":"80"
                     },{
                         "id":3,
-                        "Salon":"A103",
+                        "salon":"A103",
                         "profesor":"Rodolfo Ortega",
                         "estado":"50"
                     },{
                         "id":4,
-                        "Salon":"A104",
+                        "salon":"A104",
                         "profesor":"Darwin Cardozo",
                         "estado":"0"
                     },{
                         "id":1,
-                        "Salon":"A105",
+                        "salon":"A105",
                         "profesor":"Blanca Florez",
                         "estado":"80"
                     }
@@ -47,36 +47,36 @@ function Inicio (){
                 },
                 {
                   "id": 2,
-                  "piso": "segundo piso",
+                  "piso": "Segundo piso",
                   "salones": [
                     {
                         "id":1,
-                        "Salon":"A206",
+                        "salon":"A206",
                         "profesor":"Juan Sebastián Galindo",
                         "estado":"0"
                     },{
                         "id":2,
-                        "Salon":"A207",
+                        "salon":"A207",
                         "profesor":"Magda Martinez",
                         "estado":"80"
                     },{
                         "id":3,
-                        "Salon":"A208",
+                        "salon":"A208",
                         "profesor":"Rodolfo Ortega",
                         "estado":"50"
                     },{
                         "id":4,
-                        "Salon":"A209",
+                        "salon":"A209",
                         "profesor":"Darwin Cardozo",
                         "estado":"80"
                     },{
                         "id":1,
-                        "Salon":"A210",
+                        "salon":"A210",
                         "profesor":"Blanca Florez",
                         "estado":"0"
                     },{
                         "id":1,
-                        "Salon":"A211",
+                        "salon":"A211",
                         "profesor":"Giovani Rodriguez",
                         "estado":"50"
                     }
@@ -84,51 +84,51 @@ function Inicio (){
                 },
                 {
                   "id": 3,
-                  "piso": "tercer piso",
+                  "piso": "Tercer piso",
                   "salones": [
                     {
                         "id":1,
-                        "Salon":"A301",
+                        "salon":"A301",
                         "profesor":"Juan Sebastián Galindo",
                         "estado":"0"
                     },{
                         "id":2,
-                        "Salon":"A302",
+                        "salon":"A302",
                         "profesor":"Magda Martinez",
                         "estado":"0"
                     },{
                         "id":3,
-                        "Salon":"A303",
+                        "salon":"A303",
                         "profesor":"Rodolfo Ortega",
                         "estado":"50"
                     },{
                         "id":4,
-                        "Salon":"A304",
+                        "salon":"A304",
                         "profesor":"Darwin Cardozo",
                         "estado": "0"
                     },{
                         "id":5,
-                        "Salon":"A305",
+                        "salon":"A305",
                         "profesor":"Blanca Florez",
                         "estado":"80"
                     },{
                         "id":6,
-                        "Salon":"A306",
+                        "salon":"A306",
                         "profesor":"Giovani Rodriguez",
                         "estado":"50"
                     },{
                         "id":7,
-                        "Salon":"A307",
+                        "salon":"A307",
                         "profesor":"Juan Sebastián Galindo",
                         "estado":"0"
                     },{
                         "id":8,
-                        "Salon":"A308",
+                        "salon":"A308",
                         "profesor":"Rodolfo ortega",
                         "estado":"80"
                     },{
                         "id":9,
-                        "Salon":"A309",
+                        "salon":"A309",
                         "profesor":"Giovani Rodriguez",
                         "estado":"0"
                     }
@@ -148,7 +148,7 @@ function Inicio (){
                   "salones": [
                     {
                         "id":1,
-                        "Salon":"B102",
+                        "salon":"B102",
                         "profesor":"Administrativo",
                         "estado":"administrativo"
                     },]
@@ -158,22 +158,22 @@ function Inicio (){
                     "salones": [
                       {
                           "id":1,
-                          "Salon":"B201",
+                          "salon":"B201",
                           "profesor":"Rodolfo Ortega",
                           "estado":"50"
                       },{
                         "id":2,
-                        "Salon":"B202",
+                        "salon":"B202",
                         "profesor":"Darwin Cardozo",
                         "estado":"0"
                     },{
                         "id":3,
-                        "Salon":"B203",
+                        "salon":"B203",
                         "profesor":"Giovani Rodriguez",
                         "estado":"50"
                     },{
                         "id":4,
-                        "Salon":"B204",
+                        "salon":"B204",
                         "profesor":"Magda Martinez",
                         "estado":"80"
                     },] 
@@ -192,7 +192,7 @@ function Inicio (){
                   "salones": [
                     {
                         "id":1,
-                        "Salon":"C201",
+                        "salon":"C201",
                         "profesor":"Rodolfo Ortega",
                         "estado":"0"
                     },{
@@ -207,22 +207,22 @@ function Inicio (){
                     "salones":[
                         {
                             "id":1,
-                            "Salon":"C202",
+                            "salon":"C202",
                             "profesor":"Maria Fernandez",
                             "estado":"0"
                         },{
                             "id":2,
-                        "Salon":"C205",
+                        "salon":"C205",
                         "profesor":"Alfonso Suarez",
                         "estado":"80"
                         },{
                             "id":3,
-                        "Salon":"C206",
+                        "salon":"C206",
                         "profesor":"Mildred Dias",
                         "estado":"50"
                         },{
                             "id":4,
-                        "Salon":"C207",
+                        "salon":"C207",
                         "profesor":"Fernanda Gonzales",
                         "estado":"0"
                         }
@@ -233,32 +233,32 @@ function Inicio (){
                     "salones":[
                         {
                             "id":1,
-                            "Salon":"C301",
+                            "salon":"C301",
                             "profesor":"Maria Fernandez",
                             "estado":"50"
                         },{
                             "id":2,
-                            "Salon":"C302",
+                            "salon":"C302",
                             "profesor":"Camila Cordoba",
                             "estado":"80"
                         },{
                             "id":3,
-                            "Salon":"C303",
+                            "salon":"C303",
                             "profesor":"Fransua Leon",
                             "estado":"50"
                         },{
                             "id":4,
-                            "Salon":"C304",
+                            "salon":"C304",
                             "profesor":"Julián Acosta",
                             "estado":"80"
                         },{
                             "id":5,
-                            "Salon":"C305",
+                            "salon":"C305",
                             "profesor":"Valentina Ramirez",
                             "estado":"50"
                         },{
                             "id":2,
-                            "Salon":"C306",
+                            "salon":"C306",
                             "profesor":"Richar Eslava",
                             "estado":"80"
                         }
@@ -269,12 +269,12 @@ function Inicio (){
                     "salones":[
                         {
                             "id":1,
-                            "Salon":"C401",
+                            "salon":"C401",
                             "profesor":"Monica Alvarez",
                             "estado":"0"
                         },{
                             "id":2,
-                            "Salon":"C402",
+                            "salon":"C402",
                             "profesor":"Alexandra Unibio",
                             "estado":"50"
                         }
@@ -295,16 +295,24 @@ function Inicio (){
           }
         }
       ]);
+      const handleCardClick = (salones) => {
+        setSelectedCard([salones]);
+      };
     return(
         <>
             <Navegacion></Navegacion>
             <Container className="mt-3 mb-3">
                 <h3 className="text-center">Inicio</h3>
                 <p>Seleccione uno de los bloques</p>
-                <Card.Body>
+                <Card.Body className="text-center justify-content-center align-items-center">
                 <Row md={4}>
-                    {salones.map(salon => <Col><Cardbloques key={salon.data.id} salones={salon}/></Col>)}
+                    {salones.map(salon => <Col><Cardbloques key={salon.data.id} salones={salon}  onClick={handleCardClick}/></Col>)}
                 </Row>
+                {selectedCard ? (
+                    selectedCard.map((cardb) => <Rectangulo bloque={cardb}></Rectangulo>)
+                ) : (
+                    <></> // Esto representa un fragmento vacío, es decir, no renderiza nada.
+                )}
                 </Card.Body>
             </Container>
         </>

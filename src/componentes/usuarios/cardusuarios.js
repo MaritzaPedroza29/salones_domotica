@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Modaldetalleusuario } from "./modaldetalleusuario";
 
 
-const Cardusuario= ({usuarios, eliminarUsuario})=>{
+const Cardusuario= ({usuarios, eliminarUsuario, agregarUsuario})=>{
     const [showModal, setShowModal] = useState(false);
     const [userData, setUserData] = useState([]);
     console.log(typeof(userData));
@@ -59,6 +59,7 @@ const Cardusuario= ({usuarios, eliminarUsuario})=>{
           show={showModal}
           handleClose={handleCloseModal}
           userData={userData}
+          agregarUsuario = {agregarUsuario}
         />
       </>
     )

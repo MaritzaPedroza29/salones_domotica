@@ -44,24 +44,29 @@ code {
   max-width: 100%; /* Evita que la imagen se desborde del contenedor */
   max-height: 100%; /* Evita que la imagen se desborde del contenedor */
 }
-.mio-rectangle {
-  width: 300px;
-  height: 450px;
+.mio-rectangle{
+  align-items: center;
+  width: 500px;
+  height: 650px;
   background-color:#ffffff;
   border: 1px solid black;
+  margin-right: 50px;
 }
-.mio-cuadrado {
-  width: 20px;
-  height: 20px;
+.mio-cuadrado{
+  width: 40px;
+  height: 40px;
   background-color:#ffffff;
   border: 1px solid black;
+  font-size: 12px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .mio-columnas{
   display: flex;
   justify-content: space-between;
 }
 .mio-rectangle-piso{
-  width: 260px;
+  width: 400px;
   height: 100px;
   background-color:#ffffff;
   border: 1px solid black;
@@ -135,4 +140,10 @@ code {
 }
 .mio-cardbloques{
   width: 100px;
+  margin-bottom: 20px;
+}
+.mio-centrar-tarjeta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

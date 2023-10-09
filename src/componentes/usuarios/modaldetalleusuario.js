@@ -2,10 +2,10 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
-import { usuario } from '../../states/sliceReducers';
+
 
 function Modaldetalleusuario(props){
-    const { show, handleClose, userData} = props;
+    const { show, handleClose, userData, agregarUsuario} = props;
     const [disabled, setDisabled] = useState(true);
     const [nuevoNombre, setNuevoNombre] = useState("");
     const [nuevoCorreo, setNuevoCorreo] = useState("");
@@ -48,7 +48,7 @@ function Modaldetalleusuario(props){
           },
         };
         console.log(nuevoUsuarioData);
-        //actualizarUsuarios(nuevoUsuarioData);
+        agregarUsuario(nuevoUsuarioData);
         // Actualiza el estado para agregar el nuevo usuario
         setNuevoNombre({
           nombre: "",

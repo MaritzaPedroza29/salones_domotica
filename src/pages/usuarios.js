@@ -83,11 +83,6 @@ const Usuarios= ()=>{
           setUsuarios(nuevosUsuarios);
         }
       };
-      const usuariosArray = Object.values(usuarios);
-
-      usuariosArray.map(usuario => {
-        console.log(usuario.nombre);
-      });
     const abrirModal = () => {
         setMostrarModal(true);
       };
@@ -103,7 +98,7 @@ return(
             <Botoncrear abrirModal={abrirModal} ></Botoncrear>
             <ModalCrearUsuario mostrarModal={mostrarModal} cerrarModal={cerrarModal} agregarUsuario={agregarUsuario} usuarios={usuarios}/>
             <Row className="justify-content-md-center">
-                    {usuarios.map(usuario => <Col sm="12" md="8" lg="6"><Cardusuario key={usuario.id} usuarios={usuario}  eliminarUsuario={eliminarUsuario}/></Col>)}
+                    {usuarios.map(usuario => <Col sm="12" md="8" lg="6"><Cardusuario key={usuario.id} usuarios={usuario} eliminarUsuario={eliminarUsuario} agregarUsuario={agregarUsuario}/></Col>)}
             </Row>
         </Container>
     </>     
