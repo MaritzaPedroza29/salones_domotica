@@ -147,3 +147,13 @@ code {
   justify-content: center;
   align-items: center;
 }
+.mio-cardsalones.card{
+  width: 140px;
+  margin: 20px 0px 10px 0px;
+  justify-content:space-between;
+  border: 2px solid #000000; 
+}
+.mio-iconos{
+  width: 30px;
+  margin-right: 2px;
+}
