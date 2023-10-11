@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
 import '../../css/index.css';
 import { Cuadrado } from './cuadradoinicio';
+import Button from 'react-bootstrap/Button';
 
 function Rectangulo({ bloque }) {
   console.log(bloque.data.pisos);
@@ -12,7 +13,7 @@ function Rectangulo({ bloque }) {
 
   return (
     <>
-     <label>{bloque.bloque}</label>
+    <label>{bloque.bloque}</label>
     <div className="mio-centrar-tarjeta">
     <Card className="mio-rectangle">
       <Card.Body>
@@ -31,6 +32,18 @@ function Rectangulo({ bloque }) {
           </Card>
           </>
         ))}
+      </Card.Body>
+    </Card>
+    <Card>
+      <Card.Body>
+        <div className="mio-cuadrado">
+        </div>
+        <p>aire acondicionado está apagado y no hay personas</p>
+        <div className='mio-cuadrado'>
+        </div>
+        <p>airea condicionado está prendido pero hay personas</p>
+        <div className='mio-cuadrado'></div>
+        <p>aire acondicionado está prendido pero no hay personas</p>
       </Card.Body>
     </Card>
     </div>

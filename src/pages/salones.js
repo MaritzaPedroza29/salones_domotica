@@ -206,9 +206,28 @@ function Salones () {
         console.log(salonesSeleccionados);
         setSelectedOptionInfo(salonesSeleccionados);
     };
-    const agregarSalones = (nuevoSalon) => {
-        setSalones([...salones, nuevoSalon]);
-      };
+    const agregarSalones = (nuevosSalones) => {
+        // Clonar el arreglo de salones para no mutar el estado directamente
+        const nuevosSalonesData = [...salones];
+
+        // Encuentra el índice del bloque al que deseas agregar el nuevo salón
+        const bloqueIndex = nuevosSalonesData.findIndex((bloque) => bloque.bloque === nuevosSalones.bloque);
+
+        if (bloqueIndex !== -1) {
+            // Agrega el nuevo salón al subarreglo de salones dentro del bloque
+            nuevosSalones[bloqueIndex].data.salones.push({
+            id: nuevosSalones[bloqueIndex].data.salones.length + 1,
+            nombresalon: nuevosSalones.nombre,
+            dispositivos: "3 dispositivos",
+            aire_acondicionado: nuevosSalones.aire_acondicionado,
+            televisor: nuevosSalones.televisor,
+            puerta: nuevosSalones.puerta,
+            });
+        }
+
+        // Actualiza el estado con el nuevo arreglo de salones
+        setSalones(nuevosSalones);
+    };
     const abrirModal = () => {
         console.log("hola mundo");
         setMostrarModal(true);
@@ -221,7 +240,7 @@ function Salones () {
         <>
             <Navegacion></Navegacion>
             <Container className="mt-3 mb-3">
-                <h3 className="text-center">Escenarios</h3>
+                <h3 className="text-center">Salones</h3>
                 <Botoncrear abrirModal={abrirModal}></Botoncrear>
                 <Modalcrearsalon mostrarModal={mostrarModal} cerrarModal={cerrarModal} salones={salones} agregarSalon={agregarSalones}></Modalcrearsalon>
                 <p>Seleccione una de las opciones</p>

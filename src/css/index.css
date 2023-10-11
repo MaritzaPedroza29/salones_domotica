@@ -157,3 +157,20 @@ code {
   width: 30px;
   margin-right: 2px;
 }
+.mio-boton-redondo .btn{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Aplica un radio de 50% para hacer el botón redondo */
+  background-color: #ffffff; /* Color de fondo del botón */
+  color: #000000; /* Color del texto */
+  font-size: 16px;
+  border: 1px solid #a4130e; /* Quita el borde */
+  cursor: pointer;
+  float: right;
+  margin-top: -70px;
+}
+.mio-carddispositivos{
+  width: 200px;
+  margin-top: 20px;
+  border: 1px solid #a4130e;
+}
